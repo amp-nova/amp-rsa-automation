@@ -1,0 +1,12 @@
+sfmc:
+  label: my-label
+  sfmcCredentials:
+    id: my-id
+    secret: my-secret
+    authDomain: https://example.auth.marketingcloudapis.com
+  contentAssets:
+    contentTypeSchemas: 
+      - id: http://example.com/content-type.json
+        htmlTemplate: my_template
+      - id: http://example.com/content-type2.json
+        htmlTemplate: my_template2

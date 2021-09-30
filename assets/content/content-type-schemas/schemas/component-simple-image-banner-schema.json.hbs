@@ -1,0 +1,41 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "{{cms.contentBaseUri}}/component-simple-image-banner.json",
+	"title": "Simple Image Banner",
+	"description": "Simple Image Banner accelerator",
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	"type": "object",
+	"properties": {
+		"bannerImage": {
+			"description": "",
+			"type": "object",
+			"allOf": [
+				{
+					"$ref": "{{cms.contentBaseUri}}/component-simple-image.json"
+				}
+			],
+			"title": "Banner image"
+		},
+		"link": {
+			"title": "Link",
+			"description": "The link for this content",
+			"type": "string"
+		},
+		"analytics": {
+			"title": "Analytics Label",
+			"type": "string",
+			"description": "Analytics Label for this banner",
+			"minLength": 0,
+			"maxLength": 2000
+		}
+	},
+	"propertyOrder": [
+		"bannerImage",
+		"link",
+		"analytics"
+	]
+}

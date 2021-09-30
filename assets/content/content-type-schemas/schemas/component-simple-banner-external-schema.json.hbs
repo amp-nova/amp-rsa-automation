@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "{{cms.contentBaseUri}}/component-simple-banner-external.json",
+  "title": "Simple Banner External",
+  "description": "Simple Banner Content Type with external image",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "cloudinary_image": {
+      "title": "Cloudinary Image",
+      "type": "object",
+      "properties": {
+        "secure_url": {
+          "title": "Secure URL",
+          "description": "URL for the image",
+          "type": "string"
+        },
+        "public_id": {
+          "title": "Public ID",
+          "description": "Id (the image name)",
+          "type": "string"
+        }
+      },
+      "ui:extension": {
+        "name": "cloudinary-browser"
+      },
+      "propertyOrder": []
+    },
+    "textPositioning": {
+      "title": "Text Positioning",
+      "type": "object",
+      "properties": {
+        "textPositionHorizontal": {
+					"title": "Horizontal Text Position",
+					"description": "Select: Left / Center / Right",
+					"type": "string",
+					"default": "left",
+					"enum": [
+						"left",
+						"center",
+						"right"
+					]
+				},
+				"textPositionVertical": {
+					"title": "Vertical Text Position",
+					"description": "Select: Top / Middle / Bottom",
+					"type": "string",
+					"default": "top",
+					"enum": [
+						"top",
+						"middle",
+						"bottom"
+					]
+				}
+      }
+    },
+    "bannerText": {
+      "title": "Banner Text Settings",
+      "type": "object",
+      "properties": {
+        "header": {
+          "title": "Header",
+          "description": "Add header text",
+          "type": "string"
+        },
+        "subheader": {
+          "title": "Subheader",
+          "description": "Add Subheader text",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "description": "Add description text",
+          "type": "string"
+        }
+      }
+    },
+    "ctaSettings": {
+      "title": "CTA Settings",
+      "type": "object",
+      "properties": {
+        "buttonText": {
+          "title": "CTA Text",
+          "type": "string",
+          "minimum": 4,
+          "maximum": 12
+        },
+        "linkUrl": {
+          "title": "CTA URL",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "propertyOrder": [
+    "cloudinary_image",
+    "textPositioning",
+    "bannerText",
+    "ctaSettings"
+  ]
+}

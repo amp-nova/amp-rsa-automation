@@ -1,0 +1,41 @@
+{
+  "id": "d3032ddb-2d61-4a16-b0ce-a6c0520e0ce0",
+  "body": {
+    "_meta": {
+      "name": "A/B Test - Pets",
+      "schema": "{{cms.contentBaseUri}}/component-dy-ab-content.json"
+    },
+    "variants": [
+      {
+        "components": [
+          {
+            "_meta": {
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+            },
+            "contentType": "{{cms.contentBaseUri}}/simple-banner.json",
+            "id": "a144ba41-997f-422b-a044-1864123672e0"
+          }
+        ],
+        "name": "dogs"
+      },
+      {
+        "components": [
+          {
+            "_meta": {
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+            },
+            "contentType": "{{cms.contentBaseUri}}/simple-banner.json",
+            "id": "5776f709-08b2-4489-bdd6-f7c0a6d18411"
+          }
+        ],
+        "name": "cats"
+      }
+    ],
+    "dynamicYieldCampaignName": "ab-test-pets"
+  },
+  "label": "A/B Test - Pets",
+  "version": 1,
+  "lastPublishedVersion": 1,
+  "lastPublishedDate": "2021-02-07T23:46:17.545Z",
+  "status": "ACTIVE"
+}

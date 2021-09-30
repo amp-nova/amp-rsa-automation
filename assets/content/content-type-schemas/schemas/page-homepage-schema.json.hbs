@@ -1,0 +1,56 @@
+{ 
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "{{cms.contentBaseUri}}/page-homepage.json",
+
+	"title": "Homepage",
+	"description": "",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+    ],
+    
+    "trait:hierarchy": {
+		"childContentTypes": [
+            "{{cms.contentBaseUri}}/page-category.json",
+            "{{cms.contentBaseUri}}/page-landing.json",
+            "{{cms.contentBaseUri}}/page-external.json"
+        ]
+    },
+	
+	"type": "object",
+	"properties": {
+        "title": {
+            "title": "Title",
+            "type": "string"
+        },
+        "_meta": {
+            "title": "",
+            "properties": {
+                "deliveryKey": {
+                    "title": "Slug",
+                    "type": "string"
+                }
+            }
+        },
+        "slots": {
+            "title": "Slots",
+            "type": "array",
+            "items": {
+                "title": "Slots",
+                "allOf": [
+                    { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-reference" },
+                    {
+                        "properties": {
+                            "contentType": { "$ref": "./lib-components.json#/definitions/anySlot" }
+                        }
+                    }
+                ]
+            }
+        } 
+    },
+    
+    "definitions": {
+    }
+}
