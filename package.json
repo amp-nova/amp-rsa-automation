@@ -1,7 +1,7 @@
 {
-  "name": "amp-rsa-automation",
+  "name": "@amp-nova/amp-rsa-automation",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "scripts": {
     "sync": "run-s import-content-type-schemas import-content-types",
     "import-content-type-schemas": "dc-cli content-type-schema import ./config/content-type-schemas",
