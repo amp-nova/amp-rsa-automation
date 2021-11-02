@@ -11,6 +11,7 @@
     "automate:provisioning": "demo-cli provisioning generate-request",
     "automate:integration:sfmc": "demo-cli integration generate-sfmc-request",
     "automate:configure": "demo-cli configure",
+    "automate:initial-config": "echo > hub-mapping.json&&echo > workflow-states-mapping.json",
     "automate:media": "demo-cli configure&&demo-cli media get-buckets&&demo-cli media import&&demo-cli media get-assets",
     "automate:serverless": "demo-cli configure&&demo-cli repositories clone&&demo-cli serverless configure&&demo-cli serverless install&&demo-cli serverless deploy&&demo-cli serverless get-endpoints",
     "automate:webapp:configure:local": "demo-cli configure&&demo-cli webapp configure&&git add -A&&git commit -m 'Updated webapp'&&git push",
@@ -27,7 +28,7 @@
     "build-storybook": "build-storybook --no-dll"
   },
   "dependencies": {
-    "@amplience/dc-cli": "^0.12.0",
+    "dc-cli": "github:amp-nova/dc-cli",
     "dam-cli": "github:amp-nova/dam-cli",
     "demo-cli": "github:amp-nova/demo-cli#dev",
     "run-s": "0.0.0"
