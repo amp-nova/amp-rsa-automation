@@ -1,0 +1,5 @@
+{
+  "body": "./schemas/algolia-schema.json",
+  "schemaId": "https://amprsa.net/integration/algolia",
+  "validationLevel": "PARTIAL"
+}

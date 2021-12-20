@@ -1,5 +1,5 @@
 {
-  "contentTypeUri": "{{cms.contentBaseUri}}/simple-localized-banner.json",
+  "contentTypeUri": "https://amprsa.net/simple-localized-banner",
   "status": "ACTIVE",
   "settings": {
     "label": "Simple Localized Banner",
@@ -12,7 +12,7 @@
     "visualizations": [
       {
         "label": "JSON",
-        "templatedUri": "https://delivery-preview.visualizations.content.amplience.net?id=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&hub={{cms.hubName}}&realtime=true",
+        "templatedUri": "https://delivery-preview.visualizations.content.amplience.net?id=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&hub={{cms.hub.name}}&realtime=true",
         "default": false
       },
       {
@@ -27,7 +27,7 @@
       },
       {
         "label": "Android App",
-        "templatedUri": "https://appetize.io/embed/{{cms.stagingName}}?device=nexus5&scale=100&autoplay=false&orientation=portrait&deviceColor=black&params=%7B%22cms%22%3A%22http%3A%2F%2F\{{vse.domain}}%22%2C%22contentId%22%3A%22\{{content.sys.id}}%22%2C%20%22locale%22%3A%20%22\{{locales}}%22%7D",
+        "templatedUri": "https://appetize.io/embed/{{cms.hub.stagingApi}}?device=nexus5&scale=100&autoplay=false&orientation=portrait&deviceColor=black&params=%7B%22cms%22%3A%22http%3A%2F%2F\{{vse.domain}}%22%2C%22contentId%22%3A%22\{{content.sys.id}}%22%2C%20%22locale%22%3A%20%22\{{locales}}%22%7D",
         "default": false
       },
       {
@@ -48,7 +48,7 @@
     ],
     "cards": [
       {
-        "templatedUri": "{{cms.cardsAppUrl}}/?#vse=\{{vse.domain}}&content=\{{content.sys.id}}"
+        "templatedUri": "https://amp-rsa-cards.vercel.app/?#vse=\{{vse.domain}}&content=\{{content.sys.id}}"
       }
     ]
   },

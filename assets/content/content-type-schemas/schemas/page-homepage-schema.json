@@ -1,0 +1,56 @@
+{ 
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://amprsa.net/page/homepage",
+
+	"title": "Homepage",
+	"description": "",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+    ],
+    
+    "trait:hierarchy": {
+		"childContentTypes": [
+            "https://amprsa.net/page/category",
+            "https://amprsa.net/page/landing",
+            "https://amprsa.net/page/external"
+        ]
+    },
+	
+	"type": "object",
+	"properties": {
+        "title": {
+            "title": "Title",
+            "type": "string"
+        },
+        "_meta": {
+            "title": "",
+            "properties": {
+                "deliveryKey": {
+                    "title": "Slug",
+                    "type": "string"
+                }
+            }
+        },
+        "slots": {
+            "title": "Slots",
+            "type": "array",
+            "items": {
+                "title": "Slots",
+                "allOf": [
+                    { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-reference" },
+                    {
+                        "properties": {
+                            "contentType": { "$ref": "https://amprsa.net/lib/components#/definitions/anySlot" }
+                        }
+                    }
+                ]
+            }
+        } 
+    },
+    
+    "definitions": {
+    }
+}

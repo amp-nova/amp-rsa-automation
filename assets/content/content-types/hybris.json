@@ -1,0 +1,18 @@
+{
+  "contentTypeUri": "https://amprsa.net/credentials/hybris",
+  "status": "ACTIVE",
+  "settings": {
+    "label": "Hybris credentials",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://pbs.twimg.com/profile_images/720170461519331328/io6GkdMb_400x400.jpg"
+      }
+    ],
+    "visualizations": [],
+    "cards": []
+  },
+  "repositories": [
+    "sitestructure"
+  ]
+}

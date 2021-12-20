@@ -1,0 +1,38 @@
+{ 
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://amprsa.net/textBlockList",
+	"title": "Text Block List",
+	"description": "A list of text blocks to display",
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	"type": "object",
+	"properties": {
+		"textBlocks": {
+			"type": "array",
+			"title": "Text Blocks",
+			"description": "A list of text blocks to display",
+			"items": {
+				"allOf": [
+					{
+						"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+					},
+					{
+						"properties": {
+							"contentType": {
+								"title": "Text Block",
+								"enum": [
+									"https://amprsa.net/textBlock"
+								]
+							}
+						}
+					}
+				]
+			},
+			"minItems": 1,
+			"maxItems": 4
+		}
+	}
+}

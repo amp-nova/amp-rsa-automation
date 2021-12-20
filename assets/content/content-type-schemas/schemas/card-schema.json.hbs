@@ -1,6 +1,6 @@
 { 
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "{{cms.contentBaseUri}}/card.json",
+  "$id": "https://amprsa.net/card",
   "title": "Card",
   "description": "A single card of content",
   "allOf": [
@@ -16,7 +16,7 @@
       "description": "Image used in the card",
       "allOf": [
         {
-          "$ref": "{{cms.contentBaseUri}}/image.json"
+          "$ref": "https://amprsa.net/image"
         }
       ]
     },
@@ -41,7 +41,7 @@
       "title": "Links",
       "description": "Links for the card",
       "items": {
-        "$ref": "{{cms.contentBaseUri}}/link.json"
+        "$ref": "https://amprsa.net/link"
       },
       "minItems": 0,
       "maxItems": 4

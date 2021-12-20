@@ -1,0 +1,28 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://amprsa.net/integration/personify",
+
+	"definitions": {
+		"config": {
+			"title": "Personify XP configuration",
+			"type": "object",
+			"properties": {
+				"enabled": {
+					"title": "Personify integration enabled",
+					"type": "boolean"
+				},
+				"personifyApi": {
+					"title": "Personify API URL",
+					"type": "string",
+					"minLength": 0,
+					"maxLength": 100
+				}
+			},
+			"propertyOrder": [
+				"enabled",
+				"personifyApi"
+			]
+		}
+		
+	}
+}

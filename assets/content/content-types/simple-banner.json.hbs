@@ -1,5 +1,5 @@
 {
-  "contentTypeUri": "{{cms.contentBaseUri}}/simple-banner.json",
+  "contentTypeUri": "https://amprsa.net/simple-banner",
   "status": "ACTIVE",
   "settings": {
     "label": "Simple Banner",
@@ -12,7 +12,7 @@
     "visualizations": [
       {
         "label": "JSON",
-        "templatedUri": "https://delivery-preview.visualizations.content.amplience.net?id=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&hub={{cms.hubName}}&realtime=true",
+        "templatedUri": "https://delivery-preview.visualizations.content.amplience.net?id=\{{content.sys.id}}&vse=\{{vse.domain}}&locale=\{{locales}}&hub={{cms.hub.name}}&realtime=true",
         "default": false
       },
       {
@@ -58,7 +58,7 @@
     ],
     "cards": [
       {
-        "templatedUri": "{{cms.cardsAppUrl}}/?#vse=\{{vse.domain}}&content=\{{content.sys.id}}"
+        "templatedUri": "https://amp-rsa-cards.vercel.app/?#vse=\{{vse.domain}}&content=\{{content.sys.id}}"
       }
     ]
   },

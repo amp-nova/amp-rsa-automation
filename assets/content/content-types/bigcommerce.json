@@ -1,0 +1,18 @@
+{
+  "contentTypeUri": "https://amprsa.net/credentials/bigcommerce",
+  "status": "ACTIVE",
+  "settings": {
+    "label": "BigCommerce credentials",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYQLCKXMQOjXZPDaLiyKnaFBtSPBQzPJZ_Dq4-1bLQwMt-Q-shOEEl_GQmyy5wMLG-15Q&usqp=CAU"
+      }
+    ],
+    "visualizations": [],
+    "cards": []
+  },
+  "repositories": [
+    "sitestructure"
+  ]
+}

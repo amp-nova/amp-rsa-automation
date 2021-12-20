@@ -1,0 +1,88 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://amprsa.net/component/personify-targeted-content",
+    "title": "Targeted Content",
+    "description": "",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "info": {
+            "type": "string",
+            "const": "ignore",
+            "ui:extension": {
+                "name": "personify-extension",
+                "params": {
+                    "type": "coverage"
+                }
+            }
+        },
+        "groups": {
+            "type": "array",
+            "title": "Target Groups",
+            "items": {
+                "type": "object",
+                "title": "Target Group",
+                "properties": {
+                    "criteria": {
+                        "$ref": "#/definitions/personifyXPCriteria"
+                    },
+                    "components": {
+                        "title": "Components",
+                        "type": "array",
+                        "items": {
+                            "title": "Component",
+                            "allOf": [
+                                {
+                                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+                                },
+                                {
+                                    "properties": {
+                                        "contentType": {
+                                            "$ref": "https://amprsa.net/lib/components#/definitions/anyComponent"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "personifyXPCriteria": {
+            "type": "object",
+            "ui:extension": {
+                "name": "personify-extension",
+                "params": {
+                    "type": [
+                        "behaviors",
+                        "tags"
+                    ]
+                }
+            },
+            "properties": {
+                "behaviors": {
+                    "type": "array",
+                    "title": "Behaviors",
+                    "items": {
+                        "type": "string",
+                        "title": "Behavior"
+                    }
+                },
+                "tags": {
+                    "type": "array",
+                    "title": "Tags",
+                    "items": {
+                        "type": "string",
+                        "title": "Tag"
+                    }
+                }
+            }
+        }
+    }
+}

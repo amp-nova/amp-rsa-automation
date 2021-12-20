@@ -1,0 +1,21 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://amprsa.net/integration/app",
+
+	"definitions": {
+		"config": {
+			"type": "object",
+			"properties": {
+				"url": {
+					"title": "App base URL",
+					"type": "string",
+					"minLength": 0,
+					"maxLength": 200
+				}
+			},
+			"propertyOrder": [
+				"url"
+			]
+		}
+	}
+}

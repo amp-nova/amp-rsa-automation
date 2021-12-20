@@ -1,0 +1,72 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://amprsa.net/amprsa/automation",
+
+	"title": "Title",
+	"description": "Description",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	
+	"definitions": {
+		"mapping": {
+			"type": "object",
+			"properties": {
+				"from": {
+					"title": "mapping ->",
+					"type": "string",
+					"minLength": 0,
+					"maxLength": 100
+				},
+				"to": {
+					"title": "-> mapping",
+					"type": "string",
+					"minLength": 0,
+					"maxLength": 100
+				}
+			}
+		},
+		"keyValue": {
+			"type": "object",
+			"properties": {
+				"key": {
+					"title": "key",
+					"type": "string",
+					"minLength": 0,
+					"maxLength": 100
+				},
+				"value": {
+					"title": "value",
+					"type": "string",
+					"minLength": 0,
+					"maxLength": 100
+				}
+			}
+		}
+	},
+
+	"type": "object",
+	"properties": {
+		"contentItems": {
+			"title": "Content items",
+			"type": "array",
+			"items": { "$ref": "#/definitions/mapping" }
+		},
+		"workflowStates": {
+			"title": "Workflow states",
+			"type": "array",
+			"items": { "$ref": "#/definitions/mapping" }
+		},
+		"imagesMap": {
+			"title": "Images map",
+			"type": "array",
+			"items": { "$ref": "#/definitions/keyValue" }
+		}
+	},
+	"propertyOrder": [
+		"contentItems", "workflowStates", "imagesMap"
+	]
+}

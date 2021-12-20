@@ -2,7 +2,7 @@
 #parse( "../../../master/macros.vm" )
 
 # some entities (such as vse) are hub specific, this variable is used as a common prefix in the name of these entities
-#set( $hub = "{{cms.hubName}}" )
+#set( $hub = "{{cms.hub.name}}" )
 #set( $hubLabel = "{{cms.hubLabel}}" )
 #set( $bucketId = "<TBD>" )
 #set( $securityGroup = "Dynamic Content" )
@@ -33,7 +33,7 @@ groups:
   - label: Dynamic Content-Customer-Admin
     members:
       {{#each cms.internalAcl}}
-      - email: {{this}}+{{../cms.hubName}}@amplience.com 
+      - email: {{this}}+{{../cms.hub.name}}@amplience.com 
       {{/each}}
       {{#each cms.externalAcl}}
       - email: {{this}}
@@ -67,7 +67,7 @@ hub:
     - #hubAmplienceById(${{this}}) 
     {{/each}}
     {{#each cms.internalAcl}}
-    - #hubAdmin("{{this}}+{{../cms.hubName}}@amplience.com")
+    - #hubAdmin("{{this}}+{{../cms.hub.name}}@amplience.com")
     {{/each}}
     {{#each cms.externalAcl}}
     - #hubAdmin("{{this}}")
@@ -100,7 +100,7 @@ content-repositories:
       - #repoAmplienceById(${{this}})
       {{/each}}
       {{#each ../cms.internalAcl}}
-      - #repoEdit("{{this}}+{{../../cms.hubName}}@amplience.com")
+      - #repoEdit("{{this}}+{{../../cms.hub.name}}@amplience.com")
       {{/each}} 
       {{#each ../cms.externalAcl}}
       - #repoEdit("{{this}}")

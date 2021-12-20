@@ -1,0 +1,60 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://amprsa.net/category-experience",
+
+	"title": "Category Experience",
+	"description": "",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+
+	"trait:hierarchy": {
+		"childContentTypes": [
+			"https://amprsa.net/category-experience",
+			"https://amprsa.net/product/experience",
+			"https://amprsa.net/designer-experience"
+		]
+	},
+
+	"trait:sortable": {
+		"sortBy": [
+			{
+				"key": "default",
+				"paths": ["/priority"]
+			}
+		]
+	},
+
+	"trait:filterable": {
+		"filterBy": [
+			{
+				"paths": [
+					"/id"
+				]
+			},
+			{
+				"paths": [
+					"/id",
+					"/_meta/hierarchy/parentId"
+				]
+			}
+		]
+	},
+	
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "string",
+			"title": "Category ID"
+		},
+		"priority": {
+			"type": "number",
+			"title": "Priority"
+		},
+		"experience": { "$ref": "https://amprsa.net/lib/experience#/definitions/experience" }
+	},
+	"propertyOrder": []
+}

@@ -1,0 +1,184 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://amprsa.net/product/content",
+
+	"title": "Title",
+	"description": "Description",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	
+	"type": "object",
+	"properties": {
+		"_meta": {
+            "title": "Product Delivery Key",
+            "properties": {
+                "deliveryKey": {
+					"title": "Delivery Key",
+                    "description": "product/productId",
+                    "type": "string",
+                    "pattern": "product\/.*"
+                }
+            }
+        },
+		"header": {
+			"title": "Title",
+			"description": "description",
+			"allOf": [
+				{ "$ref": "http://bigcontent.io/cms/schema/v1/localization#/definitions/localized-string" }
+			]
+		},
+		"text": {
+      "type": "array",
+      "ui:extension": {
+        "name": "custom-rich-text",
+        "params": {
+          "language": "json",
+          "styles": ".was-price { color: red; }",
+          "tools": {
+            "blacklist": [],
+            "dc-content-link": {
+              "contentTypes": [
+                "https://amprsa.net/simple-banner",
+                "https://amprsa.net/banner",
+                "https://amprsa.net/banner-with-poi",
+                "https://amprsa.net/blog",
+                "https://amprsa.net/blogList",
+                "https://amprsa.net/card",
+                "https://amprsa.net/cardList",
+                "https://amprsa.net/curated-product-grid",
+                "https://amprsa.net/customRichText",
+                "https://amprsa.net/product/grid",
+                "https://amprsa.net/externalBlock",
+                "https://amprsa.net/image",
+                "https://amprsa.net/product",
+                "https://amprsa.net/promo",
+                "https://amprsa.net/promoList",
+                "https://amprsa.net/shoppableVideo",
+                "https://amprsa.net/slider",
+                "https://amprsa.net/splitBlock",
+                "https://amprsa.net/text",
+                "https://amprsa.net/video",
+                "https://amprsa.net/component/personify-targeted-content",
+                "https://amprsa.net/component/dy-ab-content",
+                "https://amprsa.net/component/dynamic-blog-list"
+              ],
+               "contentTypeSettings":
+                            {
+                                "cards":
+                                {
+                                    "*": "{{app.url}}/visualization/standalone?vse=\{{vse.domain}}&content=\{{content.sys.id}}"
+                                }
+                            }
+            },
+            "inline_styles": {
+              "classNames": [
+                {
+                  "className": "was-price",
+                  "label": "Was Price"
+                }
+              ]
+            }
+          },
+          "toolbar": {
+            "layout": [
+              {
+                "type": "group",
+                "children": [
+                  {
+                    "type": "button",
+                    "toolName": "undo"
+                  },
+                  {
+                    "type": "button",
+                    "toolName": "redo"
+                  }
+                ]
+              },
+              {
+                "type": "dropdown",
+                "label": "Styles",
+                "toolNames": [
+                  "inline_styles_className_was-price"
+                ]
+              },
+              {
+                "type": "group",
+                "children": [
+                  {
+                    "type": "button",
+                    "toolName": "strong"
+                  },
+                  {
+                    "type": "button",
+                    "toolName": "em"
+                  },
+                  {
+                    "type": "button",
+                    "toolName": "link"
+                  }
+                ]
+              },
+              {
+                "type": "group",
+                "children": [
+                  {
+                    "type": "button",
+                    "toolName": "bullet_list"
+                  },
+                  {
+                    "type": "button",
+                    "toolName": "ordered_list"
+                  }
+                ]
+              },
+              {
+                "type": "group",
+                "children": [
+                  {
+                    "type": "button",
+                    "toolName": "dc-image-link"
+                  },
+                  {
+                    "type": "button",
+                    "toolName": "image"
+                  },
+                  {
+                    "type": "button",
+                    "toolName": "dc-content-link"
+                  },
+                  {
+                    "type": "button",
+                    "toolName": "blockquote"
+                  },
+                  {
+                    "type": "button",
+                    "toolName": "code_block"
+                  },
+                  {
+                    "type": "button",
+                    "toolName": "horizontal_rule"
+                  }
+                ]
+              },
+              {
+                "type": "group",
+                "children": [
+                  {
+                    "type": "button",
+                    "toolName": "clear_formatting"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+		
+	},
+	"propertyOrder": []
+}

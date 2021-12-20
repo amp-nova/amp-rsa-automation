@@ -1,6 +1,6 @@
 { 
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "{{cms.contentBaseUri}}/splitBlock.json",
+	"$id": "https://amprsa.net/splitBlock",
 "title": "Split Block",
   "description": "A reusable content type which allows 2 content types to be used together to create a split block",
   "allOf": [
@@ -24,12 +24,12 @@
               "contentType": {
                 "title": "",
                 "enum": [
-                  "{{cms.contentBaseUri}}/image.json",
-                  "{{cms.contentBaseUri}}/video.json",
-                  "{{cms.contentBaseUri}}/text.json",
-                  "{{cms.contentBaseUri}}/banner.json",
-				          "{{cms.contentBaseUri}}/card.json",
-                  "{{cms.contentBaseUri}}/curated-product-grid.json"
+                  "https://amprsa.net/image",
+                  "https://amprsa.net/video",
+                  "https://amprsa.net/text",
+                  "https://amprsa.net/banner",
+				          "https://amprsa.net/card",
+                  "https://amprsa.net/curated-product-grid"
                 ]
               }
             }

@@ -4,10 +4,12 @@
   "private": false,
   "scripts": {
     "sync": "run-s import-content-type-schemas import-content-types",
+
     "import-content-type-schemas": "dc-cli content-type-schema import ./config/content-type-schemas",
     "import-content-types": "dc-cli content-type import --sync ./config/content-types",
-    "export-content-type-schemas": "dc-cli content-type-schema expoert ./config/content-type-schemas",
+    "export-content-type-schemas": "dc-cli content-type-schema export ./config/content-type-schemas",
     "export-content-types": "dc-cli content-type export ./config/content-types",
+
     "automate:provisioning": "demo-cli provisioning generate-request",
     "automate:integration:sfmc": "demo-cli integration generate-sfmc-request",
     "automate:configure": "demo-cli configure",
@@ -15,16 +17,15 @@
     "automate:serverless": "demo-cli configure&&demo-cli repositories clone&&demo-cli serverless configure&&demo-cli serverless install&&demo-cli serverless deploy&&demo-cli serverless get-endpoints",
     "automate:webapp:configure:local": "demo-cli configure&&demo-cli webapp configure&&git add -A&&git commit -m 'Updated webapp'&&git push",
     "automate:webapp:configure": "demo-cli configure&&demo-cli webapp configure",
-    "automate:settings": "demo-cli configure&&demo-cli content configure&&dc-cli settings import ./repositories/content/settings/settings.json --mapFile workflow-states-mapping.json&&demo-cli content get-workflow-states&&demo-cli content get-content-repositories",
-    "automate:schemas": "demo-cli configure&&demo-cli content configure&&dc-cli content-type-schema import ./repositories/content/content-type-schemas&&dc-cli content-type import ./repositories/content/content-types --sync",
-    "automate:webhooks": "demo-cli configure&&demo-cli content configure&&dc-cli webhooks import ./repositories/content/webhooks/webhooks.json",
-    "automate:extensions": "demo-cli configure&&demo-cli content configure&&dc-cli extensions import ./repositories/content/extensions/extensions.json",
-    "automate:indexes": "demo-cli configure&&demo-cli content configure&&dc-cli indexes import ./repositories/content/indexes/test-index.json&&dc-cli indexes import ./repositories/content/indexes/indexes.json&&demo-cli content get-search-api-key",
-    "automate:content": "demo-cli configure&&demo-cli content configure&&dc-cli content-item import ./repositories/content/content-items --mapFile hub-mapping.json&&demo-cli content get-hierarchies",
-    "automate:content-with-republish": "demo-cli configure&&demo-cli content configure&&dc-cli content-item import ./repositories/content/content-items --republish --mapFile hub-mapping.json&&demo-cli content get-hierarchies",
-    "automate:all": "run-s automate:configure automate:media automate:serverless automate:webapp automate:settings automate:schemas automate:webhooks automate:extensions automate:indexes automate:webapp automate:content automate:schemas",
-    "storybook": "start-storybook -p 6006 --no-dll",
-    "build-storybook": "build-storybook --no-dll"
+    "automate:content:configure": "demo-cli configure&&demo-cli content configure",
+
+    "x-automate:settings": "demo-cli configure&&demo-cli content configure&&dc-cli settings import ./content/settings/settings.json --mapFile mapping.json&&demo-cli content get-workflow-states&&demo-cli content get-content-repositories",
+    "x-automate:schemas": "demo-cli configure&&demo-cli content configure&&dc-cli content-type-schema import ./content/content-type-schemas&&dc-cli content-type import ./content/content-types --sync",
+    "automate:webhooks": "demo-cli configure&&demo-cli content configure&&dc-cli webhooks import ./content/webhooks/webhooks.json",
+    "x-automate:extensions": "demo-cli configure&&demo-cli content configure&&dc-cli extensions import ./content/extensions/extensions.json",
+    "x-automate:indexes": "demo-cli configure&&demo-cli content configure&&dc-cli indexes import ./content/indexes/test-index.json&&dc-cli indexes import ./content/indexes/indexes.json&&demo-cli content get-search-api-key",
+    "x-automate:content": "demo-cli configure&&demo-cli content configure&&dc-cli content-item import ./content/content-items --mapFile mapping.json&&demo-cli content get-hierarchies",
+    "automate:all": "run-s automate:configure automate:media automate:serverless automate:webapp automate:settings automate:schemas automate:webhooks automate:extensions automate:indexes automate:webapp automate:content automate:schemas"
   },
   "dependencies": {
     "@amplience/dc-cli": "^0.12.0",

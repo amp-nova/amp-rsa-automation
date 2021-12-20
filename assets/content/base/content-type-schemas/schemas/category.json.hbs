@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://amprsa.net/category",
+    "$comment": "Docs: https://amplience.com/docs/development/schema-examples/hierarchies/ingredients-list-hierarchy.html#recipe",
+    "title": "Category",
+    "description": "A retail category",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "definitions": {
+        "id": {
+            "title": "Category ID",
+            "description": "The ID of the category",
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 200
+        },
+        "name": {
+            "title": "Category name",
+            "description": "The name of the category",
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 200
+        },
+        "slug": {
+            "title": "Category slug",
+            "description": "The slug of the category",
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 200
+        }
+    },
+    "propertyOrder": []
+}

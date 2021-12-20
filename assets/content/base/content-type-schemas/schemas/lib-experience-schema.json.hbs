@@ -1,0 +1,38 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://amprsa.net/lib/experience",
+
+	"title": "Title",
+	"description": "Description",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	
+	"definitions": {
+		"experience": {
+			"type": "object",
+			"title": "Experience",
+			"properties": {
+				"pdpLayout": {
+					"title": "Product Page Layout",
+					"allOf": [
+						{ "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
+						{
+							"properties": {
+								"contentType": {
+									"enum": [
+										"https://amprsa.net/product/page-layout"
+									]
+								}
+							}
+						}
+					]
+				}
+
+			}
+		}
+	}
+}
