@@ -12,18 +12,6 @@
     "status": "ACTIVE"
   },
   {
-    "name": "google-analytics",
-    "label": "Google Analytics",
-    "description": "Google Analytics Dashboard",
-    "url" : "https://ga-dashboard.extensions.content.amplience.net",
-    "height" : 200,
-    "category": "DASHBOARD",
-    "parameters" : "{\n  \"googleAnalyticsClientId\": \"{{analytics.ga.googleAnalyticsClientId}}\",\n  \"googleAnalyticsViewId\": \"ga:{{analytics.ga.googleAnalyticsViewId}}\",\n  \"googleAnalyticsKey\": \"{{{analytics.ga.googleAnalyticsKey}}}\",\n  \"googleAnalyticsClientEmail\": \"{{analytics.ga.googleAnalyticsClientEmail}}\",\n  \"mappings\": {\n    \"contentItemId\": \"ga:dimension1\",\n    \"editionId\": \"ga:dimension2\",\n    \"slotId\": \"ga:dimension3\"\n  }\n}",
-    "snippets": [],
-    "settings" : "{\"API\":{\"READ\":true,\"EDIT\":true},\"SANDBOX\":{\"SAME_ORIGIN\":true,\"MODALS\":true,\"NAVIGATION\":true,\"POPUPS\":true,\"POPUP_ESCAPE_SANDBOX\":true,\"DOWNLOADS\":true,\"FORMS\":true}}",
-    "status": "ACTIVE"
-  },
-  {
     "name": "dom-extension",
     "label": "DOM Extension",
     "description": "DOM editor",
@@ -31,18 +19,6 @@
     "url": "https://dc-extension-dom-amplience-presales.vercel.app",
     "category": "CONTENT_FIELD",
     "parameters": "{}",
-    "snippets": [],
-    "settings": null,
-    "status": "ACTIVE"
-  },
-  {
-    "name": "personify-extension",
-    "label": "Personify Extension",
-    "description": "Behavioural AI targeting",
-    "height": 200,
-    "url": "https://personify.extensions.content.amplience.net",
-    "category": "CONTENT_FIELD",
-    "parameters": "{ \"apiUrl\": \"https://fqpx7qvccb.execute-api.eu-west-1.amazonaws.com/dev/personalization/personify\" }",
     "snippets": [],
     "settings": null,
     "status": "ACTIVE"
@@ -113,42 +89,6 @@
     "status": "ACTIVE"
   },
   {
-    "name": "personify-coverage",
-    "label": "Personify Coverage",
-    "description": "",
-    "url": "https://dc-extension-personify-coverage.s3-eu-west-1.amazonaws.com/index.html",
-    "height": 200,
-    "category": "CONTENT_FIELD",
-    "parameters": "{}",
-    "snippets": [],
-    "settings": "{\"API\":{\"READ\":true,\"EDIT\":true},\"SANDBOX\":{\"SAME_ORIGIN\":true,\"MODALS\":true,\"NAVIGATION\":true,\"POPUPS\":true,\"POPUP_ESCAPE_SANDBOX\":true,\"DOWNLOADS\":true,\"FORMS\":true}}",
-    "status": "ACTIVE"
-  },
-  {
-    "name": "personify-mission-picker",
-    "label": "Personify Mission Picker",
-    "description": "",
-    "url": "https://amplience-personifyxp.s3-eu-west-1.amazonaws.com/mission-picker.html",
-    "height": 200,
-    "category": "CONTENT_FIELD",
-    "parameters": "{}",
-    "snippets": [],
-    "settings": "{\"API\":{\"READ\":false,\"EDIT\":false},\"SANDBOX\":{\"SAME_ORIGIN\":false,\"MODALS\":false,\"NAVIGATION\":false,\"POPUPS\":false,\"POPUP_ESCAPE_SANDBOX\":false,\"DOWNLOADS\":false,\"FORMS\":false}}",
-    "status": "ACTIVE"
-  },
-  {
-    "name": "personify-tag-picker",
-    "label": "Personify Tag Picker",
-    "description": "",
-    "url": "https://amplience-personifyxp.s3-eu-west-1.amazonaws.com/tag-picker.html",
-    "height": 200,
-    "category": "CONTENT_FIELD",
-    "parameters": "{}",
-    "snippets": [],
-    "settings": "{\"API\":{\"READ\":false,\"EDIT\":false},\"SANDBOX\":{\"SAME_ORIGIN\":false,\"MODALS\":false,\"NAVIGATION\":false,\"POPUPS\":false,\"POPUP_ESCAPE_SANDBOX\":false,\"DOWNLOADS\":false,\"FORMS\":false}}",
-    "status": "ACTIVE"
-  },
-  {
     "name": "product-selector-commerce-tools",
     "label": "Product Selector (CommerceTools)",
     "description": "Allows business users to manually select products",
@@ -160,23 +100,6 @@
       {
         "label": "Product Selector",
         "body": "{\n  \"title\": \"Product Selector\",\n  \"description\": \"description\",\n  \"type\": \"array\",\n  \"minItems\": 1,\n  \"maxItems\": 50,\n  \"items\": {\n    \"type\": \"string\"\n  },\n  \"ui:extension\": {\n    \"name\": \"product-selector-commerce-tools\"\n  }\n}"
-      }
-    ],
-    "settings": "{\"API\":{\"READ\":false,\"EDIT\":false},\"SANDBOX\":{\"SAME_ORIGIN\":false,\"MODALS\":false,\"NAVIGATION\":false,\"POPUPS\":false,\"POPUP_ESCAPE_SANDBOX\":false,\"DOWNLOADS\":false,\"FORMS\":false}}",
-    "status": "ACTIVE"
-  },
-  {
-    "name": "search-index-picker-algolia",
-    "label": "Search Index Picker (Algolia)",
-    "description": "Allows a user to pick facets and filters for a ui extension",
-    "url": "https://amplience-extensions-dot-act-spark.appspot.com/dc-extension-tk-product-searcher/index.html",
-    "height": 200,
-    "category": "CONTENT_FIELD",
-    "parameters": "{}",
-    "snippets": [
-      {
-        "label": "Search Index Picker (Algolia)",
-        "body": "{\n  \"title\": \"Product Selector\",\n  \"description\": \"TK Algolia Product Selector\",\n  \"type\": \"object\",\n  \"filterFacets\": {\n    \"type\": \"array\"\n  },\n  \"queryText\": {\n    \"type\": \"string\"\n  },\n  \"ui:extension\": {\n    \"url\": \"https://amplience-extensions-dot-act-spark.appspot.com/dc-extension-tk-product-seacher/index.html\",\n    \"height\": 200,\n    \"params\": {\n      \"indexName\": \"{{algolia.indexes.productListSearch.prod}}\",\n      \"appId\": \"{{algolia.credentials.tacit.appId}}\",\n      \"apiKey\": \"{{algolia.credentials.tacit.apiKey}}\",\n      \"facets\": [\n        {\n          \"name\": \"Price\",\n          \"attribute\": \"variations.price\",\n          \"component\": \"price\",\n          \"searchBox\": \"false\"\n        },\n        {\n          \"name\": \"Size\",\n          \"attribute\": \"variations.attributes.size\",\n          \"component\": \"terms\",\n          \"searchBox\": \"true\"\n        },\n        {\n          \"name\": \"Category\",\n          \"attribute\": \"product.categories.slug.en\",\n          \"component\": \"terms\",\n          \"searchBox\": true\n        },\n        {\n          \"name\": \"Designer\",\n          \"attribute\": \"attributes.designer\",\n          \"component\": \"terms\",\n          \"searchBox\": true\n        },\n        {\n          \"name\": \"Color\",\n          \"attribute\": \"attributes.colorFreeDefinition\",\n          \"component\": \"terms\",\n          \"searchBox\": true\n        }\n      ],\n      \"locale\": \"en\",\n      \"currency\": \"USD\"\n    }\n  }\n}"
       }
     ],
     "settings": "{\"API\":{\"READ\":false,\"EDIT\":false},\"SANDBOX\":{\"SAME_ORIGIN\":false,\"MODALS\":false,\"NAVIGATION\":false,\"POPUPS\":false,\"POPUP_ESCAPE_SANDBOX\":false,\"DOWNLOADS\":false,\"FORMS\":false}}",
