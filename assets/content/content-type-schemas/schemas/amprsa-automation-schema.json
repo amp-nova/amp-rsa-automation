@@ -28,23 +28,6 @@
 					"maxLength": 100
 				}
 			}
-		},
-		"keyValue": {
-			"type": "object",
-			"properties": {
-				"key": {
-					"title": "key",
-					"type": "string",
-					"minLength": 0,
-					"maxLength": 100
-				},
-				"value": {
-					"title": "value",
-					"type": "string",
-					"minLength": 0,
-					"maxLength": 100
-				}
-			}
 		}
 	},
 
@@ -59,14 +42,9 @@
 			"title": "Workflow states",
 			"type": "array",
 			"items": { "$ref": "#/definitions/mapping" }
-		},
-		"imagesMap": {
-			"title": "Images map",
-			"type": "array",
-			"items": { "$ref": "#/definitions/keyValue" }
 		}
 	},
 	"propertyOrder": [
-		"contentItems", "workflowStates", "imagesMap"
+		"contentItems", "workflowStates"
 	]
 }

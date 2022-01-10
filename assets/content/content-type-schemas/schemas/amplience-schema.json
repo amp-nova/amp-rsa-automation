@@ -36,20 +36,6 @@
 					"description": "cms.hub.stagingApi",
 					"minLength": 0,
 					"maxLength": 100
-				},
-				"contentBaseUri": {
-					"title": "Content Base URI (base URI for content type schemas)",
-					"type": "string",
-					"description": "cms.hub.contentBaseUri",
-					"minLength": 0,
-					"maxLength": 100
-				},
-				"socketIoServer": {
-					"title": "Socket IO server for visualization",
-					"type": "string",
-					"description": "cms.hub.socketIoServer",
-					"minLength": 0,
-					"maxLength": 100
 				}		
 			}
 		},
