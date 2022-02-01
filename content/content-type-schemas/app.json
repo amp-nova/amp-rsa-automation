@@ -1,5 +1,0 @@
-{
-  "body": "./schemas/app-schema.json",
-  "schemaId": "https://amprsa.net/integration/app",
-  "validationLevel": "PARTIAL"
-}

@@ -20,10 +20,11 @@
 			"minLength": 0,
 			"maxLength": 200
 		},
-		"app": {
-			"title": "App configuration",
-			"type": "object",
-			"allOf": [{ "$ref": "https://amprsa.net/integration/app#/definitions/config" }]
+		"url": {
+			"title": "App deployment URL",
+			"type": "string",
+			"minLength": 0,
+			"maxLength": 200
 		},
 		"algolia": {
 			"title": "Algolia configuration",
