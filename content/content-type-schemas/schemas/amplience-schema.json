@@ -1,6 +1,9 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://amprsa.net/integration/amplience",
+	"$id": "https://amprsa.net/site/integration/amplience",
+
+	"title": "Amplience Integration Config",
+	"description": "",
 
 	"definitions": {
 		"config": {

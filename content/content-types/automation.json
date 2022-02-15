@@ -1,8 +1,8 @@
 {
-  "contentTypeUri": "https://amprsa.net/amprsa/automation",
+  "contentTypeUri": "https://amprsa.net/site/automation",
   "status": "ACTIVE",
   "settings": {
-    "label": "AMP RSA Automation",
+    "label": "amprsa automation",
     "icons": [
       {
         "size": 256,

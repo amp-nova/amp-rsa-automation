@@ -3,13 +3,14 @@
   "body": {
     "_meta": {
       "name": "Taxonomies",
-      "schema": "https://amprsa.net/config/taxonomies",
+      "schema": "https://amprsa.net/site/tag-group",
       "deliveryKey": "hierarchy/taxonomies",
       "hierarchy": {
         "root": true
       }
     },
-    "type": "Taxonomies"
+    "type": "Taxonomies",
+    "label": "Taxonomies"
   },
   "version": 1,
   "label": "Taxonomies",

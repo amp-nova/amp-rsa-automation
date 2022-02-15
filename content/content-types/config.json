@@ -1,18 +1,16 @@
 {
-  "contentTypeUri": "https://amprsa.net/amprsa/config",
+  "contentTypeUri": "https://amprsa.net/site/config",
   "status": "ACTIVE",
   "settings": {
-    "label": "AMP RSA config",
+    "label": "Site Configuration",
     "icons": [
       {
         "size": 256,
-        "url": "https://cdn-icons-png.flaticon.com/512/627/627495.png"
+        "url": "https://bigcontent.io/cms/icons/experience-management/exp-settings.png"
       }
     ],
     "visualizations": [],
     "cards": []
   },
-  "repositories": [
-    "sitestructure"
-  ]
+  "repositories": [ "sitestructure" ]
 }
