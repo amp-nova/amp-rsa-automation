@@ -1,6 +1,6 @@
 { 
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://amprsa.net/blog",
+  "$id": "https://amprsa.net/content/blog",
   "title": "Blog",
   "description": "A Blog Post",
   "allOf": [
@@ -16,7 +16,7 @@
       "description": "Blog Snippet",
       "allOf": [
         {
-          "$ref": "https://amprsa.net/blogSnippet"
+          "$ref": "https://amprsa.net/content/blog-snippet"
         }
       ]
     },
@@ -26,7 +26,7 @@
       "description": "The main content for the blog",
       "allOf": [
         {
-          "$ref": "https://amprsa.net/customRichText"
+          "$ref": "https://amprsa.net/content/rich-text"
         }
       ]
     },
@@ -44,27 +44,19 @@
               "contentType": {
                 "title": "",
                 "enum": [
-                  "https://amprsa.net/simple-banner",
-                  "https://amprsa.net/banner",
-                  "https://amprsa.net/banner-with-poi",
-                  "https://amprsa.net/card",
-                  "https://amprsa.net/cardList",
-                  "https://amprsa.net/curated-product-grid",
-                  "https://amprsa.net/customRichText",
-                  "https://amprsa.net/product-grid",
-                  "https://amprsa.net/externalBlock",
-                  "https://amprsa.net/image",
-                  "https://amprsa.net/product",
-                  "https://amprsa.net/promo",
-                  "https://amprsa.net/promoList",
-                  "https://amprsa.net/shoppableVideo",
-                  "https://amprsa.net/slider",
-                  "https://amprsa.net/splitBlock",
-                  "https://amprsa.net/text",
-                  "https://amprsa.net/video",
-                  "https://amprsa.net/component/product-carousel",
-                  "https://amprsa.net/component/teaser",
-                  "https://amprsa.net/component/dynamic-blog-list"
+                  "https://amprsa.net/content/simple-banner",
+                  "https://amprsa.net/content/card",
+                  "https://amprsa.net/content/card-list",
+                  "https://amprsa.net/content/curated-product-grid",
+                  "https://amprsa.net/content/rich-text",
+                  "https://amprsa.net/content/product-grid",
+                  "https://amprsa.net/content/html",
+                  "https://amprsa.net/content/image",
+                  "https://amprsa.net/content/slider",
+                  "https://amprsa.net/content/split-block",
+                  "https://amprsa.net/content/text",
+                  "https://amprsa.net/content/video",
+                  "https://amprsa.net/content/dynamic-blog-list"
                 ]
               }
             }
@@ -95,7 +87,7 @@
 										"properties": {
 											"contentType": {
 												"enum": [
-													"https://amprsa.net/config/theme"
+													"https://amprsa.net/site/theme"
 												]
 											}
 										}

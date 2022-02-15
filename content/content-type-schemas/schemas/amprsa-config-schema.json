@@ -1,9 +1,9 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://amprsa.net/amprsa/config",
+	"$id": "https://amprsa.net/site/amprsa",
 
-	"title": "AMP RSA Configuration",
-	"description": "Description",
+	"title": "amprsa config",
+	"description": "Describes a storefront integration configuration.",
 
 	"allOf": [
 		{
@@ -29,17 +29,17 @@
 		"algolia": {
 			"title": "Algolia configuration",
 			"type": "object",
-			"allOf": [{ "$ref": "https://amprsa.net/integration/algolia#/definitions/config" }]
+			"allOf": [{ "$ref": "https://amprsa.net/site/integration/algolia#/definitions/config" }]
 		},
 		"cms": {
 			"title": "Amplience configuration",
 			"type": "object",
-			"allOf": [{ "$ref": "https://amprsa.net/integration/amplience#/definitions/config" }]
+			"allOf": [{ "$ref": "https://amprsa.net/site/integration/amplience#/definitions/config" }]
 		},
 		"googlemaps": {
 			"title": "Google Maps configuration",
 			"type": "object",
-			"allOf": [{ "$ref": "https://amprsa.net/integration/googlemaps#/definitions/config" }]
+			"allOf": [{ "$ref": "https://amprsa.net/site/integration/googlemaps#/definitions/config" }]
 		},
 		"commerce": {
 			"title": "Commerce integration",
@@ -49,7 +49,7 @@
 					"properties": {
 						"contentType": {
 							"enum": [
-								"https://amprsa.net/store"
+								"https://amprsa.net/site/credentials"
 							]
 						}
 					}
@@ -59,10 +59,10 @@
 	},
 	"propertyOrder": [
 		"environment",
-		"app",
+		"url",
 		"cms",
 		"commerce",
 		"algolia",
-		"analytics"
+		"googlemaps"
 	]
 }

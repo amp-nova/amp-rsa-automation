@@ -2,17 +2,17 @@
   "id": "3717797c-64d1-481a-b466-9c9c82ec441c",
   "body": {
     "_meta": {
-      "name": "Configuration",
-      "schema": "https://amprsa.net/config",
+      "name": "Site Configuration",
+      "schema": "https://amprsa.net/site/config",
       "deliveryKey": "hierarchy/configuration",
       "hierarchy": {
         "root": true
       }
     },
-    "type": "Configuration"
+    "type": "Site Configuration"
   },
   "version": 1,
-  "label": "Configuration",
+  "label": "Site Configuration",
   "status": "ACTIVE",
   "lastPublishedVersion": 1,
   "lastPublishedDate": "2021-02-07T23:16:42.255Z",
