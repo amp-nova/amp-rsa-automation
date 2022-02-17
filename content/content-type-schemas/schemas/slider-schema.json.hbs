@@ -18,19 +18,12 @@
       "title": "Slides",
       "description": "Select from banners, images and videos to use in this slider",
       "items": {
+        "title": "Slides",
         "allOf": [
-          {
-            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
-          },
+          { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
           {
             "properties": {
-              "contentType": {
-                "title": "",
-                "enum": [
-                  "https://amprsa.net/content/image",
-                  "https://amprsa.net/content/video"
-                ]
-              }
+              "contentType": { "$ref": "https://amprsa.net/lib/components#/definitions/anyComponent" }
             }
           }
         ]
