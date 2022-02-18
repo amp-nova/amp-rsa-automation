@@ -27,14 +27,17 @@
 	"type": "object",
 	"properties": {
         "_meta": {
-            "title": "",
+            "title": "Category Slug",
             "properties": {
                 "deliveryKey": {
                     "title": "Slug",
                     "type": "string",
                     "pattern": "category\/.*"
                 }
-            }
+            },
+            "required": [
+                "deliveryKey"
+            ]
         },
         "name": {
             "type": "string",

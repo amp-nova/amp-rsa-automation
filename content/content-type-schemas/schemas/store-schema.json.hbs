@@ -56,12 +56,15 @@
 			"title": "Slug",
 			"properties": {
 				"deliveryKey": {
-				"type": "string",
-				"title": "URL slug",
-				"description": "Enter the URL slug for this store (store/*)",
-				"pattern": "store\/.*"
+					"type": "string",
+					"title": "URL slug",
+					"description": "Enter the URL slug for this store (store/*)",
+					"pattern": "store\/.*"
 				}
-			}
+			},
+			"required": [
+				"deliveryKey"
+			]
 		},
 		"locationAddress": {
 			"title": "Store Address",

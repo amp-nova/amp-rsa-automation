@@ -26,13 +26,16 @@
             "type": "string"
         },
         "_meta": {
-            "title": "",
+            "title": "Homepage slug",
             "properties": {
                 "deliveryKey": {
                     "title": "Slug",
                     "type": "string"
                 }
-            }
+            },
+            "required": [
+                "deliveryKey"
+            ]
         },
         "slots": {
             "title": "Slots",
