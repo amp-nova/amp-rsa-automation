@@ -18,24 +18,6 @@
       "minLength": 0,
       "maxLength": 50
     },
-    "heroList": {
-      "type": "boolean",
-      "title": "Hero format",
-      "description": "Hero format supports exactly 3 cards"
-    },
-    "slider": {
-      "type": "boolean",
-      "title": "Slider",
-      "description": "Does the card list display as a slider? If so it will show a maximum of 3 at one time and no hero list"
-    },
-    "style": {
-      "type": "string",
-      "title": "Style",
-      "description": "Add classname for CSS styling",
-      "validation": "Please enter between 0 and 100 characters",
-      "minLength": 0,
-      "maxLength": 100
-    },
     "cards": {
       "type": "array",
       "title": "Cards",
@@ -61,5 +43,5 @@
       "maxItems": 6
     }
   },
-  "propertyOrder": ["header", "heroList", "slider", "cards", "style"]
+  "propertyOrder": ["header", "cards"]
 }
