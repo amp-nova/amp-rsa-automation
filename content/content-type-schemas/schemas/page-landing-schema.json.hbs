@@ -26,14 +26,17 @@
 	"type": "object",
 	"properties": {
         "_meta": {
-            "title": "",
+            "title": "Landing Page Slug",
             "properties": {
                 "deliveryKey": {
                     "title": "Slug",
                     "type": "string",
                     "pattern": "page\/.*"
                 }
-            }
+            },
+            "required": [
+                "deliveryKey"
+            ]
         },
         "title": {
             "title": "Title",

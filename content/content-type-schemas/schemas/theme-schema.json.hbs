@@ -32,14 +32,17 @@
     "type": "object",
     "properties": {
         "_meta": {
-            "title": "",
+            "title": "Delivery Key",
             "properties": {
                 "deliveryKey": {
                     "title": "Slug",
                     "type": "string",
                     "pattern": "theme\/.*"
                 }
-            }
+            },
+            "required": [
+                "deliveryKey"
+            ]
         },
         "label": {
             "type": "string",
