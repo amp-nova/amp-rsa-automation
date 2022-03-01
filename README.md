@@ -4,6 +4,22 @@ amp-rsa-automation
 
 This package is used by the [amprsa cli](https://github.com/amp-nova/amp-rsa-cli) to set up data for use with [Amplience Reference Storefront Architecture](https://github.com/amp-nova/amp-rsa-core).
 
+<!--
+TODO: Update references to Amplience Github (https://github.com/amplience/amp-rsa-core)
+-->
+
+The files in this project will configure a working demonstration environment with sample schemas, content types, content, slots, partials, extensions and
+
+## Media Dependencies
+This automation is dependant on related media in the Amplience DAM (Content Hub).
+
+If you account does not come with any existing media, please upload all assets in the 'Media' folder in this repository to your content hub before running any automation.
+
+[Amplience Content Hub Overview](https://amplience.com/products-services/content-hub/)
+
+[Amplience Content Hub Documention](https://amplience.com/docs/contenthub.html)
+
+
 ## File Structure
 
 ```
@@ -47,18 +63,21 @@ This package is used by the [amprsa cli](https://github.com/amp-nova/amp-rsa-cli
 ### content
 
 The root folder for automation content is `content`.  Let's dig in to what's inside there.
+- `content-type-schemas`
+
+    Schemas are your data models for your experiences.
+
+    [Content type schemas](https://amplience.com/docs/integration/contenttypes.html)
+
+- `content-types`
+
+    Content Types define where and how youd schemas can be used and attibutes for business teams.
+
+    [Content types](https://amplience.com/docs/glossary.html#content-type)
 
 - `content-items`
 
     At the root level of `content-items` there are folders that represent specific repositories.  These folders can hold both content items (`*.json.hbs`) and folders.
-
-- `content-types`
-
-    [Content types](https://amplience.com/docs/glossary.html#content-type)
-
-- `content-type-schemas`
-
-    [Content type schemas](https://amplience.com/docs/integration/contenttypes.html)
 
 - `extensions`
 
