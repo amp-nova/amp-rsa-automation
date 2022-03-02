@@ -44,12 +44,12 @@
 		"commerce": {
 			"title": "Commerce integration",
 			"allOf": [
-				{ "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-reference" },
+				{ "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
 				{
 					"properties": {
 						"contentType": {
 							"enum": [
-								"https://amprsa.net/site/credentials"
+								"https://amprsa.net/site/integration/rest"
 							]
 						}
 					}
