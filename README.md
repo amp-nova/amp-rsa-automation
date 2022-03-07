@@ -8,7 +8,11 @@ This package is used by the [amprsa cli](https://github.com/amp-nova/amp-rsa-cli
 TODO: Update references to Amplience Github (https://github.com/amplience/amp-rsa-core)
 -->
 
-The files in this project will configure a working demonstration environment with sample schemas, content types, content, slots, partials, extensions and
+The files in this project will configure a working demonstration environment with sample schemas, content types, content, slots, partials, extensions and...
+
+TABLE OF CONTENTS
+
+- Process for Import / Export
 
 ## Media Dependencies
 This automation is dependant on related media in the Amplience DAM (Content Hub).
