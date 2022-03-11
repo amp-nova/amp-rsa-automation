@@ -1,17 +1,5 @@
 [
   {
-    "name": "google-maps",
-    "label": "Google Maps",
-    "description": "Google Maps extension",
-    "url": "https://map-ui.extensions.content.amplience.net",
-    "height": 500,
-    "category": "CONTENT_FIELD",
-    "parameters": "{\n    \"apiKey\": \"{{googlemaps.apiKey}}\",\n    \"theme\": \"Dark\",\n    \"searchPlaceholderText\": \"Search for places...\"\n}",
-    "snippets": [],
-    "settings": "{\"API\":{\"READ\":false,\"EDIT\":false},\"SANDBOX\":{\"SAME_ORIGIN\":true,\"MODALS\":false,\"NAVIGATION\":false,\"POPUPS\":false,\"POPUP_ESCAPE_SANDBOX\":false,\"DOWNLOADS\":false,\"FORMS\":false}}",
-    "status": "ACTIVE"
-  },
-  {
     "name": "dom-extension",
     "label": "DOM Extension",
     "description": "DOM editor",
@@ -86,18 +74,6 @@
     "parameters": "{\n  \"repositoryId\": \"{{cms.repositories.content}}\",\n  \"_comment\": \"Content repository\",\n  \"statuses\": [\n    {\n      \"id\": \"{{cms.workflowStates.readyForTranslation}}\",\n      \"_comment\": \"Ready for Translation status\"\n    },\n    {\n      \"id\": \"{{cms.workflowStates.sentForTranslation}}\",\n      \"_comment\": \"Sent for translation status\"\n    },\n    {\n      \"id\": \"{{cms.workflowStates.translationInProgress}}\",\n      \"_comment\": \"Translation in progress status\"\n    },\n    {\n      \"id\": \"{{cms.workflowStates.translationComplete}}\",\n      \"_comment\": \"Translation complete status\"\n    }\n  ]\n}",
     "snippets": [],
     "settings": "{\"API\":{\"READ\":true,\"EDIT\":true},\"SANDBOX\":{\"SAME_ORIGIN\":true,\"MODALS\":true,\"NAVIGATION\":true,\"POPUPS\":true,\"POPUP_ESCAPE_SANDBOX\":true,\"DOWNLOADS\":true,\"FORMS\":true}}",
-    "status": "ACTIVE"
-  },
-  {
-    "name": "default-value-extension",
-    "label": "Default Value Extension",
-    "description": "Enables setting of default values for Text, Enum",
-    "url": "https://dev-solutions.s3.amazonaws.com/Jules/extensions/default-value-extension/index.html",
-    "height": 200,
-    "category": "CONTENT_FIELD",
-    "parameters": "{}",
-    "snippets": [],
-    "settings": null,
     "status": "ACTIVE"
   },
   {
