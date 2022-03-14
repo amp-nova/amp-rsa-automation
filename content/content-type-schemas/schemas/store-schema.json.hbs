@@ -73,28 +73,6 @@
 			"format": "markdown",
 			"maxLength": 150
 		},
-		"location": {
-			"title": "Store Location",
-			"type": "object",
-			"properties": {
-				"lat": {
-					"title": "Latitude",
-					"type": "number",
-					"minimum": -90,
-					"maximum": 90
-				},
-				"lng": {
-					"title": "Latitude",
-					"type": "number",
-					"minimum": -180,
-					"maximum": 180
-				}
-			},
-			"ui:extension": {
-				"name": "google-maps"	
-			},
-			"propertyOrder": []
-		},
 		"keyElements": {
 			"title": "Key Store Elements",
 			"type": "object",
@@ -130,5 +108,5 @@
 		}
 		
 	},
-	"propertyOrder": ["filterActive", "locationName", "_meta", "location", "locationAddress", "image", "keyElements", "details"]
+	"propertyOrder": ["filterActive", "locationName", "_meta", "locationAddress", "image", "keyElements", "details"]
 }
